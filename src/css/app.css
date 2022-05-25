@@ -3,6 +3,7 @@
 @import 'recipe-list.css';
 @import 'recipe.css';
 @import 'ingredient-list.css';
+@import 'recipe-edit.css';
 
 *,
 *::before,
@@ -10,6 +11,7 @@
   font-family: sans-serif;
   font-weight: 500;
   font-style: normal;
+  box-sizing: border-box;
 }
 
 html {

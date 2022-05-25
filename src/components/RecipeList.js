@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Recipe from './Recipe';
+import { RecipeContext } from './App';
 
 const RecipeList = ({ recipes }) => {
+  const { handleRecipeAdd } = useContext(RecipeContext);
   return (
     <div className='recipe-list'>
       <div>
@@ -9,8 +11,10 @@ const RecipeList = ({ recipes }) => {
           return <Recipe key={recipe.id} {...recipe} />;
         })}
       </div>
-      <div className='recipe-list__add-btn-container'>
-        <button className='btn btn--primary'>Add Recipe</button>
+      <div className='recipe-list__add-recipe-btn-container'>
+        <button className='btn btn--primary' onClick={handleRecipeAdd}>
+          Add Recipe
+        </button>
       </div>
     </div>
   );
